@@ -1,5 +1,5 @@
 FROM ubuntu:22.04
-ENV DATABRICKS_RUNTIME_VERSION=13.3
+ENV DATABRICKS_RUNTIME_VERSION=15.1
 
 ARG POETRY_VERSION=1.2.2
 ARG DEBIAN_FRONTEND=noninteractive
@@ -43,15 +43,14 @@ RUN apt-get update \
     six==1.16.0 \
     jedi==0.18.1 \
     # ensure minimum ipython version for Python autocomplete with jedi 0.17.x
-    ipython==8.10.0 \
-    numpy==1.21.5 \
-    pandas==1.4.4 \
-    pyarrow==8.0.0 \
-    matplotlib==3.5.2 \
-    jinja2==2.11.3 \
-    ipykernel==6.17.1 \
-    databricks-connect==13.2.0 \
-    black==22.6.0 \
+    ipython==8.15.0 \
+    numpy==1.23.5 \
+    pandas==2.0.3 \
+    pyarrow==14.0.1 \
+    matplotlib==3.7.2 \
+    ipykernel==6.25.1 \
+    databricks-connect==14.3.1 \
+    black==23.3.0 \
     tokenize-rt==4.2.1 \
     && apt-get purge --auto-remove --yes \
     python3-virtualenv \
